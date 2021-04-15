@@ -2,5 +2,8 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.formatOnSave": true,
-    "prettier.arrowParens": "avoid"
+    "prettier.arrowParens": "avoid",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
 }

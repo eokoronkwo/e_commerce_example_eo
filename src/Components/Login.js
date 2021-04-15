@@ -27,7 +27,7 @@ export default function Login() {
     });
   };
 
-  return user ? (
+  return !user ? (
     <>
       <div className="hero is-primary ">
         <div className="hero-body container">

@@ -3,7 +3,7 @@ import React, { useState, createRef, useEffect } from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 
-import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 import AddProduct from "./Components/AddProduct";
 import Cart from "./Components/Cart";
@@ -12,11 +12,11 @@ import ProductList from "./Components/ProductList";
 
 import AppContext from "./AppContext";
 import HeadNav from "./Components/HeadNav";
+import Home from "./Components/Home";
 
 function App() {
   const [user, setUser] = useState(null);
   const [cart, setCart] = useState({});
-  const [menu, setMenu] = useState(true);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -151,6 +151,7 @@ function App() {
         setProducts,
         addProduct,
         login,
+        logout,
         addToCart,
         removeFromCart,
         clearCart,
@@ -159,9 +160,9 @@ function App() {
     >
       <Router ref={routerRef}>
         <div className="App">
-          <HeadNav login={login} logout={logout} />
+          <HeadNav />
           <Switch>
-            <Route exact path="/" component={ProductList} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/add-product" component={AddProduct} />
