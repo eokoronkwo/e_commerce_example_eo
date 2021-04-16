@@ -26,6 +26,7 @@ export default function SideMenu(props) {
               search: "?category=premium&page=1",
               state: { category: "Premium" },
             }}
+            onClick={props.toggle}
           >
             <ListItemText>Premium</ListItemText>
           </ListItem>
@@ -37,6 +38,7 @@ export default function SideMenu(props) {
               search: "?category=essentials&page=1",
               state: { category: "Essentials" },
             }}
+            onClick={props.toggle}
           >
             <ListItemText>Essentials</ListItemText>
           </ListItem>
@@ -48,6 +50,7 @@ export default function SideMenu(props) {
               search: "?category=used&page=1",
               state: { category: "Used" },
             }}
+            onClick={props.toggle}
           >
             <ListItemText>Used</ListItemText>
           </ListItem>
@@ -59,6 +62,7 @@ export default function SideMenu(props) {
               search: "?category=vintage&page=1",
               state: { category: "Vintage" },
             }}
+            onClick={props.toggle}
           >
             <ListItemText>Vintage</ListItemText>
           </ListItem>
@@ -70,6 +74,7 @@ export default function SideMenu(props) {
               search: "?category=outdoor&page=1",
               state: { category: "Outdoor" },
             }}
+            onClick={props.toggle}
           >
             <ListItemText>Outdoor</ListItemText>
           </ListItem>
@@ -81,6 +86,7 @@ export default function SideMenu(props) {
               search: "?category=clearance&page=1",
               state: { category: "Clearance" },
             }}
+            onClick={props.toggle}
           >
             <ListItemText>Clearance</ListItemText>
           </ListItem>

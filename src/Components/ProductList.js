@@ -30,12 +30,14 @@ export default function ProductList(props) {
       import(`../Products/${category}/page${pageNum}.js`)
         .then(({ default: products }) => {
           console.log(products);
+          // setProducts(products)
         })
         .catch(error => {
-          console.log("Page doesn't exist");
+          console.error(error, "Page doesn't exist");
           import(`../Products/${category}/page1.js`).then(
             ({ default: products }) => {
               console.log(products);
+              // setProducts(products)
             }
           );
         });
