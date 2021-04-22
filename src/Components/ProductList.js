@@ -1,7 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 import AppContext from "../AppContext";
 import ProductItem from "./ProductItem";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import FirstPageIcon from "@material-ui/icons/FirstPage";
+import LastPageIcon from "@material-ui/icons/LastPage";
 
 const validCategories = [
   "premium",
@@ -42,7 +46,6 @@ export default function ProductList(props) {
           );
         });
     }
-    // setProducts(productsRepo[location.state.category]);
   }, [products, location]);
 
   const checkValidCategory = category => {
@@ -51,16 +54,16 @@ export default function ProductList(props) {
 
   return (
     <>
-      <div className="hero is-primary">
-        <div className="hero-body container">
-          <h4 className="title">
+      <div className="">
+        <div className="">
+          <h4 className="">
             {location.state ? location.state.category : "Shop By Category"}
           </h4>
         </div>
       </div>
       <br />
-      <div className="container">
-        <div className="column columns is-multiline">
+      <div className="">
+        <div className="">
           {products && products.length > 0 ? (
             products.map((product, index) => (
               <ProductItem
@@ -70,10 +73,8 @@ export default function ProductList(props) {
               />
             ))
           ) : (
-            <div className="column">
-              <span className="title has-text-grey-light">
-                No products found!
-              </span>
+            <div className="">
+              <span className="">No products found!</span>
             </div>
           )}
         </div>
