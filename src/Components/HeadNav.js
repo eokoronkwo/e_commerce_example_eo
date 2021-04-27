@@ -102,7 +102,7 @@ export default function HeadNav() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              Shop 4 Things
+              <Link to="/">Shop 4 Things</Link>
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>

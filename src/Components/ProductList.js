@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import AppContext from "../AppContext";
 import ProductItem from "./ProductItem";
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import FirstPageIcon from "@material-ui/icons/FirstPage";
 import LastPageIcon from "@material-ui/icons/LastPage";
+import { capitalize } from "@material-ui/core";
 
 const validCategories = [
   "premium",
@@ -22,28 +23,29 @@ export default function ProductList(props) {
   const [category, setCategory] = useState();
   const [pageNumber, setPageNumber] = useState(0);
   const [products, setProducts] = useState();
+  let history = useHistory();
 
   useEffect(() => {
     console.log(location);
     const params = new URLSearchParams(location.search);
     let category = params.get("category");
     let pageNum = params.get("page");
-    // create folder for each category and gput products into different files by page
-    // Then you can import by category and page number
     if (checkValidCategory(category)) {
-      import(`../Products/${category}/page${pageNum}.js`)
+      import(`../Products/${category}/${category}.js`)
         .then(({ default: products }) => {
-          console.log(products);
-          // setProducts(products)
+          if (pageNum in products) {
+            setProducts(products[pageNum]);
+          } else {
+            history.push({
+              pathname: "/products",
+              search: `?category=${category}&page=1`,
+              state: { category: capitalize(category) },
+            });
+            setProducts(products);
+          }
         })
         .catch(error => {
-          console.error(error, "Page doesn't exist");
-          import(`../Products/${category}/page1.js`).then(
-            ({ default: products }) => {
-              console.log(products);
-              // setProducts(products)
-            }
-          );
+          console.error(error);
         });
     }
   }, [products, location]);
