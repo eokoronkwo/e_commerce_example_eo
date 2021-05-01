@@ -1,4 +1,4 @@
-export default {
+const outdoor = {
   1: [
     {
       product_id: "25",
@@ -68,3 +68,5 @@ export default {
     },
   ],
 };
+
+export default outdoor;

@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import { Drawer, List, ListItem, ListItemText } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 export default function SideMenu(props) {

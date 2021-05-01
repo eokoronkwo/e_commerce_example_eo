@@ -1,6 +1,6 @@
-export default [
+const all = [
   {
-    product_id: "1",
+    product_id: "0",
     name: "Bike Handlebars",
     price: 99.99,
     stock: 70,
@@ -9,7 +9,7 @@ export default [
     rating: 4.6,
   },
   {
-    product_id: "2",
+    product_id: "1",
     name: "Fancy Napkin",
     price: 399.99,
     stock: 30,
@@ -19,7 +19,7 @@ export default [
     rating: 4.8,
   },
   {
-    product_id: "3",
+    product_id: "2",
     name: "Basketball Hoop Base",
     price: 99.99,
     stock: 50,
@@ -28,7 +28,7 @@ export default [
     rating: 4.3,
   },
   {
-    product_id: "4",
+    product_id: "3",
     name: "Magnet",
     price: 69.99,
     stock: 15,
@@ -37,7 +37,7 @@ export default [
     rating: 5.0,
   },
   {
-    product_id: "5",
+    product_id: "4",
     name: "Ribs",
     price: 149.99,
     stock: 1,
@@ -46,7 +46,7 @@ export default [
     rating: 4.9,
   },
   {
-    product_id: "6",
+    product_id: "5",
     name: "Single Red Shoelace",
     price: 189.99,
     stock: 12,
@@ -55,7 +55,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "7",
+    product_id: "6",
     name: "1MB USB Stick",
     price: 5.99,
     stock: 12,
@@ -65,7 +65,7 @@ export default [
     rating: 3.9,
   },
   {
-    product_id: "8",
+    product_id: "7",
     name: "Birdie",
     price: 9.99,
     stock: 18,
@@ -74,7 +74,7 @@ export default [
     rating: 4.1,
   },
   {
-    product_id: "9",
+    product_id: "8",
     name: "Bag of Air",
     price: 40.99,
     stock: 200,
@@ -83,7 +83,7 @@ export default [
     rating: 3.9,
   },
   {
-    product_id: "10",
+    product_id: "9",
     name: "Cardboard Box",
     price: 79.99,
     stock: 69,
@@ -92,7 +92,7 @@ export default [
     rating: 4.9,
   },
   {
-    product_id: "11",
+    product_id: "10",
     name: "Single Chopstick",
     price: 49.99,
     stock: 99,
@@ -101,7 +101,7 @@ export default [
     rating: 4.0,
   },
   {
-    product_id: "12",
+    product_id: "11",
     name: "Styrofoam Cup",
     price: 12.99,
     stock: 50,
@@ -110,7 +110,7 @@ export default [
     rating: 4.3,
   },
   {
-    product_id: "13",
+    product_id: "12",
     name: "Bent Spoon",
     price: 39.99,
     stock: 80,
@@ -119,7 +119,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "14",
+    product_id: "13",
     name: "Almost Dead Light Bulb",
     price: 10.99,
     stock: 12,
@@ -128,7 +128,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "15",
+    product_id: "14",
     name: "Deflated Soccer Ball",
     price: 12.99,
     stock: 30,
@@ -137,7 +137,7 @@ export default [
     rating: 4.1,
   },
   {
-    product_id: "16",
+    product_id: "15",
     name: "Slighty Worn Gardening Gloves",
     price: 24.99,
     stock: 88,
@@ -146,7 +146,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "17",
+    product_id: "16",
     name: "Empty Water Bottle",
     price: 8.99,
     stock: 99,
@@ -155,7 +155,7 @@ export default [
     rating: 4.2,
   },
   {
-    product_id: "18",
+    product_id: "17",
     name: "Worn Boots",
     price: 67.99,
     stock: 90,
@@ -164,7 +164,7 @@ export default [
     rating: 4.8,
   },
   {
-    product_id: "19",
+    product_id: "18",
     name: "Cassette",
     price: 13.99,
     stock: 50,
@@ -174,7 +174,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "20",
+    product_id: "19",
     name: "Home Telephone",
     price: 30.99,
     stock: 20,
@@ -183,7 +183,7 @@ export default [
     rating: 4.0,
   },
   {
-    product_id: "21",
+    product_id: "20",
     name: "Rooster Weathervane",
     price: 129.99,
     stock: 30,
@@ -192,7 +192,7 @@ export default [
     rating: 4.9,
   },
   {
-    product_id: "22",
+    product_id: "21",
     name: "Slinky",
     price: 19.99,
     stock: 80,
@@ -201,7 +201,7 @@ export default [
     rating: 3.6,
   },
   {
-    product_id: "23",
+    product_id: "22",
     name: "Typewriter",
     price: 73.99,
     stock: 20,
@@ -210,7 +210,7 @@ export default [
     rating: 3.8,
   },
   {
-    product_id: "24",
+    product_id: "23",
     name: "VHS",
     price: 10.99,
     stock: 0,
@@ -219,7 +219,7 @@ export default [
     rating: 3.7,
   },
   {
-    product_id: "25",
+    product_id: "24",
     name: "Garden Hose Head",
     price: 22.99,
     stock: 70,
@@ -228,7 +228,7 @@ export default [
     rating: 4.1,
   },
   {
-    product_id: "26",
+    product_id: "25",
     name: "Large Teddy",
     price: 149.99,
     stock: 5,
@@ -238,7 +238,7 @@ export default [
     rating: 5.0,
   },
   {
-    product_id: "27",
+    product_id: "26",
     name: "Raw Fish",
     price: 99.99,
     stock: 40,
@@ -247,7 +247,7 @@ export default [
     rating: 4.4,
   },
   {
-    product_id: "28",
+    product_id: "27",
     name: "Tangled Rope",
     price: 59.99,
     stock: 60,
@@ -256,7 +256,7 @@ export default [
     rating: 4.3,
   },
   {
-    product_id: "29",
+    product_id: "28",
     name: "Basket",
     price: 29.99,
     stock: 99,
@@ -265,7 +265,7 @@ export default [
     rating: 4.6,
   },
   {
-    product_id: "30",
+    product_id: "29",
     name: "Beach Slippers",
     price: 25.99,
     stock: 80,
@@ -275,7 +275,7 @@ export default [
     rating: 4.4,
   },
   {
-    product_id: "31",
+    product_id: "30",
     name: "Small Washing Bucket",
     price: 29.99,
     stock: 50,
@@ -284,7 +284,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "32",
+    product_id: "31",
     name: "Disposable Mask",
     price: 99.99,
     stock: 1,
@@ -293,7 +293,7 @@ export default [
     rating: 4.5,
   },
   {
-    product_id: "33",
+    product_id: "32",
     name: "Broken Down Truck",
     price: 30.99,
     stock: 2,
@@ -302,7 +302,7 @@ export default [
     rating: 3.3,
   },
   {
-    product_id: "34",
+    product_id: "33",
     name: "Rusted Cabinet",
     price: 27.99,
     stock: 20,
@@ -311,7 +311,7 @@ export default [
     rating: 3.8,
   },
   {
-    product_id: "35",
+    product_id: "34",
     name: "Ice Cubes",
     price: 13.99,
     stock: 150,
@@ -320,7 +320,7 @@ export default [
     rating: 3.5,
   },
   {
-    product_id: "36",
+    product_id: "35",
     name: "Shedded Dog Hair",
     price: 8.99,
     stock: 50,
@@ -329,7 +329,7 @@ export default [
     rating: 4.2,
   },
   {
-    product_id: "37",
+    product_id: "36",
     name: "Stonehenge",
     price: 2.99,
     stock: 0,
@@ -338,7 +338,7 @@ export default [
     rating: 3.8,
   },
   {
-    product_id: "38",
+    product_id: "37",
     name: "One Sticky Note",
     price: 6.99,
     stock: 38,
@@ -347,3 +347,5 @@ export default [
     rating: 4.2,
   },
 ];
+
+export default all;

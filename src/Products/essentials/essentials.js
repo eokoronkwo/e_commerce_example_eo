@@ -1,4 +1,4 @@
-export default {
+const essentials = {
   1: [
     {
       product_id: "7",
@@ -105,3 +105,5 @@ export default {
     },
   ],
 };
+
+export default essentials;

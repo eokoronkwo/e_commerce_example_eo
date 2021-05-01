@@ -23,7 +23,7 @@ export default function ProductList(props) {
   const [category, setCategory] = useState();
   const [pageNumber, setPageNumber] = useState(0);
   const [products, setProducts] = useState();
-  let history = useHistory();
+  const history = useHistory();
 
   useEffect(() => {
     console.log(location);
@@ -48,7 +48,7 @@ export default function ProductList(props) {
           console.error(error);
         });
     }
-  }, [products, location]);
+  }, [products, location, history]);
 
   const checkValidCategory = category => {
     return validCategories.includes(category);

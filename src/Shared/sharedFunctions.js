@@ -5,7 +5,7 @@ export const getRandomInt = exclusiveMax => {
 };
 
 export const getProductById = id => {
-  return products.default.find(p => p.product_id === id);
+  return products.find(p => p.product_id === id);
 };
 
 export const search = str => {

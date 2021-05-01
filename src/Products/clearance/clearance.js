@@ -1,4 +1,4 @@
-export default {
+const clearance = {
   1: [
     {
       product_id: "35",
@@ -38,3 +38,5 @@ export default {
     },
   ],
 };
+
+export default clearance;

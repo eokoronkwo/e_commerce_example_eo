@@ -1,4 +1,4 @@
-export default {
+const vintage = {
   1: [
     {
       product_id: "19",
@@ -57,3 +57,5 @@ export default {
     },
   ],
 };
+
+export default vintage;

@@ -1,4 +1,4 @@
-export default {
+const premium = {
   1: [
     {
       product_id: "1",
@@ -97,3 +97,5 @@ export default {
     },
   ],
 };
+
+export default premium;

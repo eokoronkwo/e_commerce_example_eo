@@ -1,18 +1,18 @@
 import "./App.scss";
-import React, { useState, createRef, useEffect } from "react";
+import "react-image-gallery/styles/scss/image-gallery.scss";
+import React, { useState, createRef, useEffect, lazy, Suspense } from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-
-import AddProduct from "./Components/AddProduct";
-import Cart from "./Components/Cart";
-import Login from "./Components/Login";
-import ProductList from "./Components/ProductList";
-
 import AppContext from "./AppContext";
-import HeadNav from "./Components/HeadNav";
-import Home from "./Components/Home";
+import { CircularProgress } from "@material-ui/core";
+
+const Home = lazy(() => import("./Components/Home"));
+const ProductList = lazy(() => import("./Components/ProductList"));
+const Cart = lazy(() => import("./Components/Cart"));
+const AddProduct = lazy(() => import("./Components/AddProduct"));
+const Login = lazy(() => import("./Components/Login"));
+const HeadNav = lazy(() => import("./Components/HeadNav"));
 
 function App() {
   const [user, setUser] = useState(null);
@@ -160,14 +160,22 @@ function App() {
     >
       <Router ref={routerRef}>
         <div className="App">
-          <HeadNav />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/add-product" component={AddProduct} />
-            <Route exact path="/products" component={ProductList} />
-          </Switch>
+          <Suspense
+            fallback={
+              <div>
+                <CircularProgress />
+              </div>
+            }
+          >
+            <HeadNav />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/cart" component={Cart} />
+              <Route exact path="/add-product" component={AddProduct} />
+              <Route exact path="/products" component={ProductList} />
+            </Switch>
+          </Suspense>
         </div>
       </Router>
     </AppContext.Provider>

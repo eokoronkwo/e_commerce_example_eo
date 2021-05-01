@@ -1,4 +1,4 @@
-export default {
+const used = {
   1: [
     {
       product_id: "13",
@@ -95,3 +95,5 @@ export default {
     },
   ],
 };
+
+export default used;
